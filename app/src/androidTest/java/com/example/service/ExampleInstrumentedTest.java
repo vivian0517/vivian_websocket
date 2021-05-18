@@ -1,4 +1,4 @@
-package com.vivian.websocket;
+package com.example.service;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.vivian.websocket", appContext.getPackageName());
+        assertEquals("com.example.service", appContext.getPackageName());
     }
 }

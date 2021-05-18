@@ -1,4 +1,4 @@
-package com.vivian.websocket;
+package com.example.service;
 
 import org.junit.Test;
 

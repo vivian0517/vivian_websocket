@@ -1,26 +1,30 @@
-package com.vivian.websocket;
+package com.example.service;
 
 
 import android.util.Log;
 
 import org.java_websocket.WebSocket;
-import org.java_websocket.client.WebSocketClient;
 import org.java_websocket.handshake.ClientHandshake;
-import org.java_websocket.handshake.ServerHandshake;
 import org.java_websocket.server.WebSocketServer;
 
 import java.net.InetSocketAddress;
-import java.net.URI;
 import java.nio.ByteBuffer;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.List;
 
 public class MyWebSocket extends WebSocketServer {
+    public List<WebSocket> webSocketList;
     MyWebSocket(InetSocketAddress host){
         super(host);
     }
     @Override
     public void onOpen(WebSocket conn, ClientHandshake handshake) {
         Log.d("websocket", "onOpen()一个客户端连接成功："+conn.getRemoteSocketAddress());
+
     }
+
+
     @Override
     public void onClose(WebSocket conn, int code, String reason, boolean remote) {
         Log.d("websocket", "onClose()服务器关闭");
@@ -50,5 +54,9 @@ public class MyWebSocket extends WebSocketServer {
     public void onStart() {
         Log.d("websocket", "onStart()，WebSocket服务端启动成功");
     }
+
+
+
+
 }
 
